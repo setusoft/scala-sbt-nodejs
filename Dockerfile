@@ -1,6 +1,6 @@
 FROM java:openjdk-8u72-jdk
 
-MAINTAINER Wadjetz <egor.neon@gmail.com>
+MAINTAINER setusoft <christian.kaps@setusoft.de>
 
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     apt-get install -y git && \

@@ -1,4 +1,4 @@
-FROM java:openjdk-8u72-jdk
+FROM java:openjdk-8-jdk
 
 MAINTAINER setusoft <christian.kaps@setusoft.de>
 

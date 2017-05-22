@@ -12,10 +12,9 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     wget -nv http://www.scala-lang.org/files/archive/scala-2.11.8.deb && \
     dpkg -i scala-2.11.8.deb && \
     rm sbt-0.13.11.deb scala-2.11.8.deb && \
-    git clone https://github.com/elasticdog/transcrypt.git ./transcrypt && \
-    cd ./transcrypt && \
-    ln -s ${PWD}/transcrypt /usr/local/bin/transcrypt && \
-    cd .. && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && \
+    sudo apt-get update && sudo apt-get install yarn && \
     apt-get clean
 
 CMD sbt

@@ -12,9 +12,9 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     wget -nv http://www.scala-lang.org/files/archive/scala-2.11.8.deb && \
     dpkg -i scala-2.11.8.deb && \
     rm sbt-0.13.11.deb scala-2.11.8.deb && \
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && \
-    sudo apt-get update && sudo apt-get install yarn && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && apt-get install yarn && \
     apt-get clean
 
 CMD sbt

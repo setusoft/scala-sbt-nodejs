@@ -1,5 +1,6 @@
 A docker file for the Scala, SBT and Node.js stack. It contains the following technologies:
 
+- RPM to build RPM packages on a Debian based system
 - Java 8
 - Scala 2.11.8
 - SBT 0.13.11

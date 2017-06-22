@@ -6,6 +6,7 @@ ENV DISPLAY :99.0
 ENV CHROME_BIN /usr/bin/google-chrome
 
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get install -y rpm && \
     apt-get install -y git && \
     apt-get install -y openssl && \
     apt-get install -y bsdmainutils && \
